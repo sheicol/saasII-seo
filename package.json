@@ -1,7 +1,7 @@
 {
-  "name": "saas2-seo",
+  "name": "lepewenlgishacademy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Academia de ingles online para estudiantes iniciantes y avanzados",
   "main": "index.js",
   "scripts": {
     "build-css": 

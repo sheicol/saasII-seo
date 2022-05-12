@@ -17,7 +17,181 @@
     box-sizing: border-box;
 }
 
+/*HEADER*/
+.header {
+    @extend .header-footer;
+    .nav{
+        @include fuentes;
+        @include flexibilizar-centrar;
+        display: flex;
+        justify-content: left;
+        text-decoration: none;
+        font-size: x-large;
+        font-weight: bolder;
+        flex: wrap;
+        a{
+            color: black;
+            text-decoration: none;
+            margin:5%;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+/*GRIDCONTAINER*/
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas:
+        "section section section section"
+        "main main  main main"
+        "main main main main"
+        "footer footer footer footer";
+        section{
+            grid-area: section;
+            main{
+                grid-area: main;
+                footer{
+                    grid-area: footer;
+            }
+        }
+    }
+}
+/*GRIDSECTION*/
+.gridSection {
+    @include fuentes;
+    display: grid;
+    grid-template-areas: "gridSection gridSection gridSection gridSection";
+    background-color: aliceblue;
+    .gridSectionSlogan {
+            grid-area: slogan;
+            text-transform: uppercase;
+            font-size: large;
+    }
+}
+/*MAIN*/
+.gridMain {
+    display: grid;
+    grid-template-areas:
+        "gridMain gridMain gridMain gridMain"
+        "gridMain gridMain gridMain gridMain";
+        background-color: #AED6F1;
+        .gridMainText{
+            @include fuentes;
+            grid-area: main;
+            margin: 2%;
+    }
+}
+/*imagen que hace parte de MAIN EN index*/
+.gridMainEs{
+    grid-area: main;
+    width: 480px;
+    height: 480px;
+    padding: 2%;
+    image-resolution:40px;
+    border-radius: 30% ;
+    margin-left: 20%;
+    border-color: rgba(0, 0, 255, 0.62);
+    border-width: 10px;
+    border-style: ridge;
+}
 
+/*FORMULARIO MAQUETADO CON BOOTSTRAP*/
+.gridMainForm {
+    @include border-radius;
+    display: gridMainForm;
+    background-color:azure;}
+/*FORMULARIO MAQUETADO CON CSS*/
+.gridMainForm1 {
+        @include border-radius;
+        display: gridMainForm;
+        background-color:azure;
+    /*nombre*/
+    .form1 {
+        grid-area: form1;
+        margin: 20px;
+            /*Email*/
+        .form2 {
+            grid-area: form2;
+            margin: 20px;
+            /*Comentarios*/
+            .form3 {
+                grid-area: form3;
+                margin: 20px 20px 20px 20px;
+            /*boton de envio*/
+            .form5 {
+                grid-area: form5;
+                margin: 20px;
+                text-align: center;
+                }
+            }
+        }
+    }
+}
+.gridMainArticle{
+    @include border-radius;
+    display: grid;
+    grid-template-areas:"main main main main";
+    background-color: $blue;
+    text-align: center;
+    .gridMainArticleUno{
+        grid-template-areas:"main";
+        text-align: justify;
+        .gridMainArticleDos {
+            grid-template-areas:"main";
+            text-align: justify;
+            .gridMainArticleTres {
+                grid-template-areas: "main";
+                text-align: justify;
+            }
+        }
+    }
+}
+/*COMIENZO DE MAINMEDIA y estilos aplicados al mismo la pagina de ACCESSO */
+.gridMainMedia {
+    display: gridMainMedia;
+    .mediaVideo1 {
+        grid-area: mediavideo1;
+        margin: 10px 10px 10px 80px;
+        border-radius: 10px;
+    }
+}
+/*FOOTER*/
+.gridFooter {
+    @extend .header-footer;
+        display: grid;
+        grid-template-areas: "gridFooter gridFooter gridFooter gridFooter gridFooter";
+        justify-content:flex-end;
+        background-image: linear-gradient(to right, #1B4F72, #5DADE2, #AED6F1);
+        .gridFooterText{
+            grid-area: footer;
+            text-align:right;       
+    }
+}
+.gridFooterUno {
+@include anclas;
+grid-area: footer;
+width: 50%;
+height: 60%;
+padding: 5%;
+}
+.gridFooterDos {
+@include anclas;
+grid-area: footer;
+width: 50%;
+height: 55%;
+padding: 5%;
+}
+.gridFooterTres {
+grid-area: footer;
+font-size: xx-large;
+font-weight: 900;
+padding: 5%;
+}
+
+/*FULL RESPONSIVE*/
 @media only screen and (max-width: 767px){
     .header {
     display: none;
