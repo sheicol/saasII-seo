@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academia de ingles, estudia con prefosores 100% norteamericanos, comienza hoy">
+    <meta name="keywords" content="COMENZAR, LOGIN, APRENDER, ONLINE">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Comenzar</title>
+    <link rel="stylesheet" href="../css/pruebacss.css">
+</head>
+
+<body>
+    <!--NAVBAR MENU CON BOOTSTRAP -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Le-Pew English</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/curso.html">Curso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/comenzar.html">Comenzar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/acceso.html">Acceso</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--HEADER (estilizado con flex-box y box-modeling)-->
+    <header class="header">
+        <!--NAV-->
+        <nav class="nav">
+            <!--NAV A menu principal-->
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/Curso.html">Curso</a>
+            <a href="../pages/Comenzar.html">Comenzar</a>
+            <a href="../pages/Acceso.html">Acceso</a>
+        </nav>
+    </header>
+    <!--SECTION (primera parte de grid) -->
+    <section class="gridSection">
+        <h1>Contact Support</h1>
+        <button class="btn btn-primary me-md-8" type="button">Comienza ya!</button>
+    </section>
+    <!--MAIN,-->
+    <main class="gridMain">
+        <div>
+            <h2 class="gridMainText">¿Por qué necesitas aprender Inglés ahora mismo?</h2>
+            <p class="gridMainArticle">
+                Aumenta un 70% las probabilidades de conseguir un buen empleo.
+                80% de las ofertas de empleos de alto nivel tienen el inglés como requisito.
+                Aumenta tu ingreso en un 40%.
+                El 75% de la bibliografía científica y documentación técnica está en inglés.
+                Aprendemos en comunidad
+                En Lew-Pew, tenemos grupos de estudio donde podrás compartir tus dudas, aportes y participar de eventos
+                exclusivos para mejorar nuestro Inglés 🚀
+            </p>
+        </div>
+        <!--FORM1, ESTILIZADO con CSS-->
+        <form class="gridMainForm1">
+            <div>
+                <h3>CONTACT SUPPORT PARA COMENZAR</h3>
+                <div class="form1">Nombre:<input name="Nombre" type="text"></div>
+                <div class="form2">Correo electronico: <input name="Correo Electronico" type="email"></div>
+                <div class="form2">Deja tu mensaje aqui</div>
+                <textarea class="form3" name="text" cols="30" rows="4"></textarea>
+                <div> <input class="form5" name="submit" type="submit" value="Enviar ahora"></div>
+            </div>
+        </form>
+    </main>
+    <!--FOOTER. 3ER Y ULTIMA PARTE DE GRID(con iconos de redes sociales e email de contacto)-->
+    <footer class="gridFooter">
+        <div>
+            <h3 class="gridFooterText">Siguenos en Nuestras Redes Sociales</h3>
+        </div>
+        <div>
+            <a href="#">Instagram</a>
+            <img class="gridFooterUno" src="../multimedia/instaicon.png">
+        </div>
+        <div>
+            <a href="#">Facebook</a>
+            <img class="gridFooterDos" src="../multimedia/fbicon.png">
+        </div>
+        <div>
+            <h4 class="gridFooterTres">Correo Electronico:Le-PewEnglish@gmail.com</h4>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

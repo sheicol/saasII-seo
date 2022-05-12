@@ -1,0 +1,25 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import "../sass2/maps";
+@import "../sass2/condicionales";
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas:
+        "section section section section"
+        "main main  main main"
+        "main main main main"
+        "footer footer footer footer";
+        section{
+            grid-area: section;
+            main{
+                grid-area: main;
+                footer{
+                    grid-area: footer;
+            }
+        }
+    }
+}

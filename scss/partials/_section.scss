@@ -1,0 +1,17 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import "../sass2/maps";
+@import "../sass2/condicionales";
+
+.gridSection {
+        @include fuentes;
+        display: grid;
+        grid-template-areas: "gridSection gridSection gridSection gridSection";
+        background-color: aliceblue;
+        .gridSectionSlogan {
+                grid-area: slogan;
+                text-transform: uppercase;
+                font-size: large;
+        }
+}

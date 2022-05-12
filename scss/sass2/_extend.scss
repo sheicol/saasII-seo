@@ -1,0 +1,14 @@
+@import "../variables/variables";
+
+
+.header-footer{
+    background-image: $background-color;
+    font-family: $tipo-de-letra;
+    font-size: $size;
+    color: $text-color;
+}
+
+.seccion{
+    background-color: $fondo-de-color
+}
+

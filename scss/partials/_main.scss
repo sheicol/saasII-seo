@@ -1,0 +1,94 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import "../sass2/maps";
+@import "../sass2/condicionales";
+
+.gridMain {
+    display: grid;
+    grid-template-areas:
+        "gridMain gridMain gridMain gridMain"
+        "gridMain gridMain gridMain gridMain";
+        background-color: #AED6F1;
+        .gridMainText{
+            @include fuentes;
+            grid-area: main;
+            margin: 2%;
+    }
+}
+/*imagen que hace parte de MAIN EN index*/
+.gridMainEs{
+    grid-area: main;
+    width: 480px;
+    height: 480px;
+    padding: 2%;
+    image-resolution:40px;
+    border-radius: 30% ;
+    margin-left: 20%;
+    border-color: rgba(0, 0, 255, 0.62);
+    border-width: 10px;
+    border-style: ridge;
+}
+
+/*ACA COMIENZA EL FORMULARIO conteneder-padre con cada uno de sus hijos en INDEX, COMENZAR Y ACCESSO. TAMBIEN SE APLICA AL FORM MAQUETADO CON BOOTSTRAP EN INDEX Y ACCESSO*/
+.gridMainForm {
+    @include border-radius;
+    display: gridMainForm;
+    background-color:azure;}
+
+    .gridMainForm1 {
+        @include border-radius;
+        display: gridMainForm;
+        background-color:azure;
+    /*nombre*/
+    .form1 {
+        grid-area: form1;
+        margin: 20px;
+            /*Email*/
+        .form2 {
+            grid-area: form2;
+            margin: 20px;
+            /*Comentarios*/
+            .form3 {
+                grid-area: form3;
+                margin: 20px 20px 20px 20px;
+            /*boton de envio*/
+            .form5 {
+                grid-area: form5;
+                margin: 20px;
+                text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.gridMainArticle{
+    @include border-radius;
+    display: grid;
+    grid-template-areas:"main main main main";
+    background-color: $blue;
+    text-align: center;
+    .gridMainArticleUno{
+        grid-template-areas:"main";
+        text-align: justify;
+        .gridMainArticleDos {
+            grid-template-areas:"main";
+            text-align: justify;
+            .gridMainArticleTres {
+                grid-template-areas: "main";
+                text-align: justify;
+            }
+        }
+    }
+}
+
+/*COMIENZO DE MAINMEDIA y estilos aplicados al mismo la pagina de ACCESSO */
+.gridMainMedia {
+    display: gridMainMedia;
+    .mediaVideo1 {
+        grid-area: mediavideo1;
+        margin: 10px 10px 10px 80px;
+        border-radius: 10px;
+    }
+}

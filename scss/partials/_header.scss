@@ -1,0 +1,27 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import "../sass2/maps";
+@import "../sass2/condicionales";
+
+.header {
+    @extend .header-footer;
+    .nav{
+        @include fuentes;
+        @include flexibilizar-centrar;
+        display: flex;
+        justify-content: left;
+        text-decoration: none;
+        font-size: x-large;
+        font-weight: bolder;
+        flex: wrap;
+        a{
+            color: black;
+            text-decoration: none;
+            margin:5%;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

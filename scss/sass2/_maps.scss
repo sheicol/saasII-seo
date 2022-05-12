@@ -1,0 +1,34 @@
+@import "../variables/variables";
+
+
+$redes:(
+    centro: $alinear-al-centro,
+    fSize: $size,
+    ancho: 50%,
+    largo: 50%
+);
+
+.footer{
+    align-items: map-get($redes, centro);
+    width:map-get($redes, ancho);
+    height:map-get($redes, largo);
+}
+
+.gridFooterText{
+    align-items: map-get($redes, centro);
+    width:map-get($redes, ancho);
+    height:map-get($redes, largo);
+}
+
+.gridFooterUno{
+    align-items: map-get($redes, centro);
+    width:map-get($redes, ancho);
+    height:map-get($redes, largo);
+}
+
+.gridFooterDos{
+    align-items: map-get($redes, centro);
+    width:map-get($redes, ancho);
+    height:map-get($redes, largo);
+}
+
