@@ -10,11 +10,31 @@
 @import "partials/footer";
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Beau+Rivage&family=Hurricane&family=Parisienne&family=Playfair+Display&family=Roboto+Slab:wght@100&family=Roboto:wght@100&family=Updock&display=swap');
 
-:root {
+*{
     margin: 0;
     padding: 0;
     font-family:'Anton', sans-serif;
     box-sizing: border-box;
+}
+
+
+/*GRIDCONTAINER*/
+.gridContainer {
+    display: grid;  
+    grid-template-areas:
+        "section section section section"
+        "main main  main main"
+        "main main main main"
+        "footer footer footer footer";
+        section{
+            grid-area: section;
+            main{
+                grid-area: main;
+                footer{
+                    grid-area: footer;
+            }
+        }
+    }
 }
 
 /*HEADER*/
@@ -35,26 +55,6 @@
             margin:5%;
             &:hover {
                 color: white;
-            }
-        }
-    }
-}
-/*GRIDCONTAINER*/
-.gridContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 25%);
-    grid-template-areas:
-        "section section section section"
-        "main main  main main"
-        "main main main main"
-        "footer footer footer footer";
-        section{
-            grid-area: section;
-            main{
-                grid-area: main;
-                footer{
-                    grid-area: footer;
             }
         }
     }
@@ -193,29 +193,30 @@ padding: 5%;
 
 /*FULL RESPONSIVE*/
 @media only screen and (max-width: 767px){
-    .header {
+ 
+/*GRIDCONTAINER*/
+.gridContainer {
+    display: grid;  
+    grid-template-areas:
+        "section"
+        "main"
+        "main"
+        "footer";
+        section{
+            grid-area: section;
+            main{
+                grid-area: main;
+                footer{
+                    grid-area: footer;
+            }
+        }
+    }
+}
+.header {
     display: none;
         .nav {
             display:none;
     }
-}
-.gridContainer{ 
-    display: grid;
-    grid-template-columns: repeat(1,100%);
-    grid-template-columns: auto;
-    grid-template-areas:"section"
-                        "main"
-                        "main"
-                        "footer";
-                        section {
-                            grid-area: section;
-                                }
-                            main {
-                                grid-area: main;
-                                }
-                                footer {
-                                    grid-area: footer;
-    }                  
 }
 /*H1 DE TODOS LOS HTML*/
 .gridSection {
@@ -321,6 +322,154 @@ padding: 5%;
 .gridFooter {
     display: grid;
     width: 180%;
+    grid-template-areas: "gridFooter";
+    justify-content:center;
+    font-size: large;
+    text-align: center;
+    }
+.gridFooterUno {
+    grid-area: footer;
+    }
+.gridFooterDos {
+    grid-area: footer;
+    }
+.gridFooterTres {
+    grid-area: footer;
+    font-weight: 900;
+    }
+.gridFooterText{
+    grid-area: footer;
+    }
+}
+
+@media only screen and (max-width: 360px){
+/*GRIDCONTAINER*/
+.gridContainer {
+    display: grid;  
+    grid-template-areas:
+        "section"
+        "main "
+        "main "
+        "footer";
+        section{
+            grid-area: section;
+            main{
+                grid-area: main;
+                footer{
+                    grid-area: footer;
+            }
+        }
+    }
+}
+.header {
+    display: none;
+        .nav {
+            display:none;
+    }
+}
+/*H1 DE TODOS LOS HTML*/
+.gridSection {
+    width: 400%;
+    background-color: azure;  
+    margin-top: 20%;
+}
+/*H2 DE TODOS LOS HTML*/
+.gridSectionSlogan {
+    width:400%;
+    margin-top: 15%;
+    text-align: center;
+}
+/*ESTILOS PARA MAIN*/
+.gridMain {
+    display: grid;
+    grid-template-areas: "main";
+    width:400%;
+    background-color: aliceblue;
+    .gridMainText{
+        @include fuentes;
+        grid-template-areas: "main";
+        margin: 2%;
+    }
+}
+/*imagen que hace parte de MAIN EN index*/
+.gridMainEs{
+    grid-area: main;
+    width: 220px;
+    height: 220px;
+    padding: 2%;
+    image-resolution:40px;
+    border-radius: 30% ;
+    border-color: rgba(0, 0, 255, 0.62);
+    border-width: 10px;
+    border-style: ridge;
+}
+/*ACA COMIENZA EL FORMULARIO conteneder-padre con cada uno de sus hijos en INDEX, COMENZAR Y ACCESSO. TAMBIEN SE APLICA AL FORM MAQUETADO CON BOOTSTRAP EN INDEX Y ACCESSO*/
+.gridMainForm {
+    @include border-radius;
+    display: gridMainForm;
+    background-color:azure;}
+    .gridMainForm1 {
+        @include border-radius;
+        display: gridMainForm;
+        background-color:azure;
+        width: 100%;
+        /*Nombre*/
+        .form1 {
+            grid-area: form1;
+            margin: 20px;
+        /*Email*/
+            .form2 {
+                grid-area: form2;
+                margin: 20px;
+        /*Comentarios*/
+                .form3 {
+                    grid-area: form3;
+                    margin: 20px 20px 20px 20px;
+        /*boton de envio*/
+                    .form5 {
+                        grid-area: form5;
+                        margin: 20px;
+                        text-align: center;
+                }
+            }
+        }
+    }
+}
+.gridMainArticle{
+    @include border-radius;
+    display: grid;
+    width: 100%;
+    grid-template-areas:"main";
+    background-color: $blue;
+    text-align: center;
+    .gridMainArticleUno{
+        grid-template-areas:"main";
+        text-align: justify;
+        text-align: center;
+        .gridMainArticleDos {
+            grid-template-areas:"main";
+            text-align: justify;
+            .gridMainArticleTres {
+                grid-template-areas: "main";
+                text-align: justify;
+            }
+        }
+    }
+}
+/*COMIENZO DE MAINMEDIA y estilos aplicados al mismo la pagina de ACCESSO */
+.gridMainMedia {
+    display: gridMainMedia;
+    width: 400%;
+    .mediaVideo1 {
+        grid-area: mediavideo1;
+        width: 25%;
+        margin: 10px 10px 10px 10px;
+        border-radius: 10px;
+    }
+}
+.gridFooter {
+    display: grid;
+    width: 400%;
     grid-template-areas: "gridFooter";
     justify-content:center;
     font-size: large;
